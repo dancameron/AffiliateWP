@@ -101,7 +101,7 @@ add_action( 'pre_get_posts', 'affwp_simple_page_test_compat', -9999 );
  * @param int|false $affiliate_id ID for the current affiliate.
  * @param string    $active_tab   Slug for the currently-active tab.
  */
-function affwp_encyclopedia_pro_creatives_affiliate_area_compat( $affiliate_id, $active_tab ) {
+function affwp_encyclopedia_pro_creatives_affiliate_area_compat( $affiliate_id, $active_tab = '' ) {
 	if ( 'creatives' === $active_tab ) {
 		add_filter( 'encyclopedia_link_terms_in_post', '__return_false' );
 	}
